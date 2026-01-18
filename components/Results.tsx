@@ -62,6 +62,7 @@ const statCard = {
       damping: 18,
     },
   },
+
 };
 
 /* =========================
@@ -70,13 +71,20 @@ const statCard = {
 const AnimatedStat = ({ item }: any) => {
   return (
     <motion.div
-      variants={statCard}
-      whileHover={{
-        scale: 1.06,
-      }}
-      transition={{ type: "spring", stiffness: 260, damping: 14 }}
-      className="relative flex flex-col gap-4 items-center justify-center text-center"
-    >
+  variants={statCard}
+  whileHover={{ scale: 1.06 }}
+  transition={{ type: "spring", stiffness: 260, damping: 14 }}
+  className="
+    relative
+    flex flex-col
+    gap-3
+    h-full
+    px-2
+    items-start sm:items-center
+    text-left sm:text-center
+  "
+>
+
       {/* Glow pulse */}
       <motion.div
         className="absolute inset-0 rounded-xl bg-[#72D600]/10 blur-xl"
@@ -86,23 +94,23 @@ const AnimatedStat = ({ item }: any) => {
 
       {/* Value */}
       <motion.h1
-        className="relative text-2xl sm:text-5xl font-extrabold text-white"
-        initial={{ scale: 0.6 }}
-        animate={{ scale: 1 }}
-        transition={{ type: "spring", stiffness: 180 }}
-      >
-        {item.value}
-      </motion.h1>
+  className="w-full text-2xl sm:text-5xl font-extrabold text-white text-left sm:text-center"
+>
+  {item.value}
+</motion.h1>
+
 
       {/* Sub */}
-      <p className="relative text-sm sm:text-base capitalize font-bold text-[#72D600]">
-        {item.sub}
-      </p>
+     <p className="text-sm sm:text-base capitalize font-bold text-[#72D600]">
+  {item.sub}
+</p>
+
 
       {/* Label */}
-      <p className="relative text-sm font-medium text-white/80">
-        {item.label}
-      </p>
+     <p className="text-sm font-medium text-white/80 leading-relaxed min-h-[3.5rem] sm:min-h-0">
+  {item.label}
+</p>
+
     </motion.div>
   );
 };
@@ -134,9 +142,9 @@ const Results = () => {
       {/* Stats Container */}
       <motion.div
         variants={container}
-        className="bg-[#053316] px-6 py-10 rounded-2xl mt-14"
+        className="bg-[#053316] px-4 sm:px-6 py-10 rounded-2xl mt-14"
       >
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 place-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 items-stretch">
           {stats.map((item, index) => (
             <AnimatedStat key={index} item={item} />
           ))}

@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import HowWeWork from "@/components/howWeWork";
 import Results from "@/components/Results";
 import Services from "@/components/services";
+import Testimonials from "@/components/Testimonials";
 import WhyUS from "@/components/whyUs";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
         <About />
         <Services />
         <Results />
+        <Testimonials/>
         <HowWeWork />
         <WhyUS />
         <ContactUs />

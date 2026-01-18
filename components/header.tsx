@@ -3,6 +3,15 @@
 'use client'
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+
+const trustedLogos = [
+  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_ojnb7g.jpg", alt: "Project One" },
+  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773619/WhatsApp_Image_2026-01-14_at_11.25.00_AM_ros7w6.jpg", alt: "Project One" },
+  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_1_ag9yfk.jpg", alt: "Project One" },
+  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773933/logo-2_qxikit.jpg", alt: "Project One" },
+];
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -178,7 +187,8 @@ const Header = () => {
 
           <p className="mt-5 sm:mt-6 text-sm sm:text-base leading-relaxed text-gray-400">
             Our proven strategies and consistent delivery have earned the trust of leading Web3 projects.
-          </p>
+              </p>
+                <TrustedLogos />  
           </div>
           </motion.div>
         </motion.div>
@@ -188,4 +198,32 @@ const Header = () => {
 };
 
 export default Header;
+
+const TrustedLogos = () => {
+  return (
+    <div className="relative mt-10 overflow-hidden">
+      {/* Fade edges */}
+      <div className="pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black to-transparent z-10" />
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black to-transparent z-10" />
+
+      <div className="flex gap-10 animate-logo-slide hover:[animation-play-state:paused]">
+        {[...trustedLogos, ...trustedLogos].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center min-w-[140px] opacity-70 hover:opacity-100 transition"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={120}
+              height={40}
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 
