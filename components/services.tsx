@@ -21,7 +21,7 @@ const ServicesData = [
   {
     title: "Guerilla marketing",
     description:
-      "We use creative and fast-moving Guerrilla Marketing techniques to keep your project trending. Through coordinated influencer posts, community discussions, and organic ratings, we make sure your brand stays visible and active across the crypto space, all done naturally, without fake hype.",
+      "We use creative and fast-moving Guerrilla Marketing techniques to keep your project trending. Through coordinated influencer posts, community discussions, and organic ratings, we make sure your project stays visible and active across the crypto space, all done naturally, without fake hype.",
     icon: <FaBolt size={40} />,
   },
   {
@@ -39,7 +39,7 @@ const ServicesData = [
   {
     title: "Token promotion",
     description:
-      "Our focus is helping projects gain more visibility and adoption through strategic token promotion. We leverage targeted campaigns, influencer collaborations, and organic community engagement—ensuring your token reaches the right audience and drives long-term adoption.",
+      "Our focus is helping projects gain more visibility and adoption through strategic token promotion. We leverage targeted campaigns, influencer collaborations, and organic community engagement ensuring your token reaches the right audience and drives long-term adoption.",
     icon: <MdBarChart size={40} />,
   },
   {
