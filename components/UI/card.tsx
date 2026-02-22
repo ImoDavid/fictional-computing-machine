@@ -25,7 +25,7 @@ const BasicCard = ({
         {vector}
       </div>
 
-      <h3 className="font-semibold mb-2 text-[#72D600] text-xl">
+      <h3 className="font-semibold mb-2 text-[#72D600] text-xl capitalize">
         {title}
       </h3>
 

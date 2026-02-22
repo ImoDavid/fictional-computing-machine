@@ -38,4 +38,6 @@ body {
   width: max-content;
   animation: logo-slide 25s linear infinite;
 }
-
+html {
+  scroll-behavior: smooth;
+}

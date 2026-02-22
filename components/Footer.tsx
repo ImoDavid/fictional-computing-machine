@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaLinkedinIn,
   FaFacebookF,
@@ -11,9 +12,13 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           {/* Logo */}
-          <div className="font-bold text-xl">
-            LOGO
-          </div>
+         <Image
+             src="/logo.svg"
+             alt="Logo"
+             width={120}
+             height={40}
+             priority
+           />
 
           {/* Quick Links */}
           <div className="flex gap-6 text-sm">
@@ -40,6 +45,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="mt-8 text-center text-[11px] text-gray-500">
+  {/* <span>© {new Date().getFullYear()} Company Name. </span> */}
+  <a
+    href="https://definitedev.netlify.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-gray-300 transition"
+  >
+    Crafted @Lungu_dev
+  </a>
+</div>
     </footer>
   );
 };

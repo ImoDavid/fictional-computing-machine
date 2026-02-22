@@ -70,7 +70,7 @@ const ContactUs = () => {
             <div className="flex flex-col">
               <span className="text-sm text-gray-500">Email</span>
               <span className="text-lg font-semibold text-white">
-                example@gmail.com
+              dehawkagency@gmail.com
               </span>
             </div>
           </motion.div>
@@ -91,54 +91,67 @@ const ContactUs = () => {
           variants={fadeUp}
           className="w-full lg:w-1/2 space-y-4"
         >
-          <div className="flex flex-col sm:flex-row gap-6">
-            <div className="w-full">
-              <label className="block text-sm font-medium text-gray-300">
-                Name
-              </label>
-              <input
-                type="text"
-                className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
-              />
-            </div>
+        <form
+  action="https://formspree.io/f/xaqdpedl"
+  method="POST"
+  className="space-y-6"
+>
+  <div className="flex flex-col sm:flex-row gap-6">
+    <div className="w-full">
+      <label className="block text-sm font-medium text-gray-300">
+        Name
+      </label>
+      <input
+        type="text"
+        name="name"
+        required
+        className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
+      />
+    </div>
 
-            <div className="w-full">
-              <label className="block text-sm font-medium text-gray-300">
-                Email
-              </label>
-              <input
-                type="email"
-                className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
-              />
-            </div>
-          </div>
+    <div className="w-full">
+      <label className="block text-sm font-medium text-gray-300">
+        Email
+      </label>
+      <input
+        type="email"
+        name="email"
+        required
+        className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
+      />
+    </div>
+  </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300">
-              Company (optional)
-            </label>
-            <input
-              type="text"
-              className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
-            />
-          </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-300">
+      Company (optional)
+    </label>
+    <input
+      type="text"
+      name="company"
+      className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
+    />
+  </div>
 
-          <div>
-            <label className="block text-sm font-medium text-gray-300">
-              Message
-            </label>
-            <textarea
-              rows={4}
-              className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
-            />
-          </div>
+  <div>
+    <label className="block text-sm font-medium text-gray-300">
+      Message
+    </label>
+    <textarea
+      name="message"
+      rows={4}
+      required
+      className="mt-1 block w-full rounded-md border border-gray-700 bg-white px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-[#72D600]"
+    />
+  </div>
 
-          <button
-            type="submit"
-            className="inline-flex w-full items-center justify-center rounded-md bg-[#053316] px-6 py-3 font-medium text-white transition hover:bg-[#064d20] focus:outline-none focus:ring-2 focus:ring-[#72D600]"
-          >
-            Send Inquiry
-          </button>
+  <button
+    type="submit"
+    className="inline-flex w-full items-center justify-center rounded-md bg-[#053316] px-6 py-3 font-medium text-white transition hover:bg-[#064d20] focus:outline-none focus:ring-2 focus:ring-[#72D600]"
+  >
+    Send Inquiry
+  </button>
+</form>
         </motion.form>
       </motion.div>
     </motion.section>

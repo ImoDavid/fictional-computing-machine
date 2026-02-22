@@ -13,7 +13,7 @@ import BasicCard from "./UI/card";
 ========================= */
 const ServicesData = [
   {
-    title: "kol marketing",
+    title: "kOL marketing",
     description:
       "We work with a trusted network of micro and nano influencers to talk about your project in an organic, authentic, and engaging way. These KOLs create buzz across X (Twitter), Telegram, and other platforms, boosting your project’s visibility and credibility with real, human-driven engagement.",
     icon: <HiMiniSpeakerWave size={40} />,

@@ -4,6 +4,9 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import CalendlyButton from "./CalendlyButton";
+
+
 
 const trustedLogos = [
   { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_ojnb7g.jpg", alt: "Project One" },
@@ -12,6 +15,13 @@ const trustedLogos = [
   { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773933/logo-2_qxikit.jpg", alt: "Project One" },
 ];
 
+const NAV_LINKS = [
+  { label: "Home", path: "#home" },
+  { label: "Services", path: "#services" },
+  { label: "Result", path: "#results" },
+  { label: "About", path: "#about" },
+  { label: "Contact", path: "#contact" },
+];
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -39,7 +49,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="relative w-full overflow-hidden bg-black pb-14">
+    <header className="relative w-full overflow-hidden bg-black pb-14" id ="home">
       {/* Animated Parallax Glow */}
       <motion.div
         className="pointer-events-none absolute inset-0"
@@ -68,32 +78,35 @@ const Header = () => {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6">
         {/* Top Bar */}
         <div className="flex items-center justify-between">
-          <motion.div
-            className="text-base sm:text-lg font-semibold text-white"
-          >
-            LOGO
-          </motion.div>
+        
+
+<motion.div className="flex items-center">
+  <Image
+    src="/logo.svg"
+    alt="Logo"
+    width={120}
+    height={40}
+    priority
+  />
+</motion.div>
 
           <nav className="hidden md:flex gap-6 rounded-full bg-[#052E14] px-8 py-3 text-sm text-gray-300">
-            {["Home", "Services", "Result", "About", "Contact"].map(item => (
+            {NAV_LINKS.map((item) => (
               <motion.a
-                key={item}
-                href="#"
+                key={item.path}
+                href={item.path}
                 whileHover={{ y: -2 }}
                 className="transition hover:text-white"
               >
-                {item}
+                {item.label}
               </motion.a>
             ))}
           </nav>
 
           <div className="flex items-center gap-3">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              className="hidden sm:inline-flex rounded-full border border-[#1eff8e]/30 bg-[#0b2a18] px-6 py-3 text-sm text-white"
-            >
-              Book a Meeting
-            </motion.button>
+          
+             
+              <CalendlyButton className="hidden sm:inline-flex rounded-full border border-[#1eff8e]/30 bg-[#0b2a18] px-6 py-3 text-sm text-white"/>
 
             <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -114,16 +127,18 @@ const Header = () => {
               exit={{ opacity: 0, y: -10 }}
               className="md:hidden mt-4 rounded-2xl bg-[#03180d] px-6 py-6 text-sm text-gray-300"
             >
-              {["Home", "Services", "Result", "About", "Contact"].map(item => (
-                <a
-                  key={item}
-                  href="#"
-                  onClick={() => setMenuOpen(false)}
-                  className="block py-2 hover:text-white"
-                >
-                  {item}
-                </a>
-              ))}
+              {NAV_LINKS.map(
+                (item) => (
+                  <a
+                    key={item.path}
+                    href={item.path}
+                    onClick={() => setMenuOpen(false)}
+                    className="block py-2 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                ),
+              )}
             </motion.nav>
           )}
         </AnimatePresence>
@@ -151,7 +166,7 @@ const Header = () => {
 
           <motion.h1
             variants={fadeUp}
-            className="text-3xl sm:text-5xl font-semibold text-white"
+            className="text-3xl  sm:text-5xl font-semibold text-white"
           >
             Grow Your Web3 Project With Real Community,
             <br className="hidden sm:block" />
@@ -160,36 +175,29 @@ const Header = () => {
 
           <motion.p
             variants={fadeUp}
-            className="mt-6 text-sm sm:text-base font-semibold text-white"
+            className="mt-6 text-sm sm:text-base  font-semibold text-white"
           >
             DeHawk bridges the gap between crypto projects and their audiences
             through authentic engagements, influencer marketing and community
             activation.
           </motion.p>
 
-          <motion.div
-            variants={fadeUp}
-            className="mt-10"
-          >
-            <motion.button
-              whileHover={{ scale: 1.08 }}
-              animate={{ boxShadow: ["0 0 0 rgba(0,0,0,0)", "0 0 25px rgba(114,214,0,0.35)", "0 0 0 rgba(0,0,0,0)"] }}
-              transition={{ duration: 3, repeat: Infinity }}
-              className="rounded-full bg-[#000F05] px-8 py-3 text-sm text-white"
-            >
-              Book a Meeting
-            </motion.button>
+          <motion.div variants={fadeUp} className="mt-10">
+           
+              
+              <CalendlyButton className="rounded-full bg-[#000F05] px-8 py-3 text-sm text-white"/>
 
-             <div className="mt-20">
-            <h1 className="text-lg lg:text-2xl font-semibold leading-tight tracking-tight text-white capitalize">
-            Trusted by
-          </h1>
+            <div className="mt-20">
+              <h1 className="text-lg lg:text-2xl font-semibold leading-tight tracking-tight text-white capitalize">
+                Trusted by
+              </h1>
 
-          <p className="mt-5 sm:mt-6 text-sm sm:text-base leading-relaxed text-gray-400">
-            Our proven strategies and consistent delivery have earned the trust of leading Web3 projects.
+              <p className="mt-5 sm:mt-6 text-sm sm:text-base leading-relaxed text-gray-400">
+                Our proven strategies and consistent delivery have earned the
+                trust of leading Web3 projects.
               </p>
-                <TrustedLogos />  
-          </div>
+              <TrustedLogos />
+            </div>
           </motion.div>
         </motion.div>
       </div>

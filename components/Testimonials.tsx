@@ -9,13 +9,16 @@ import { FaQuoteLeft } from "react-icons/fa6";
 ========================= */
 const TestimonialsData = [
   {
-    name: "Alex Morgan",
-    role: "Founder, Web3 Startup",
+    name: "Sarah",
+    role: "OnRe Finance",
     testimony:
-      "Working with this team completely changed our growth trajectory. Engagement became organic, consistent, and measurable within weeks.",
+     
+
+`We’ve enjoyed working with DeHawk to enhance OnRe’s exposure to crypto-native audiences. They’re highly receptive to feedback and adapt their approach as market conditions evolve, which has been valuable across different cycles.
+`,
   },
   {
-    name: "Sarah Kim",
+    name: "Margaret Kim",
     role: "Community Lead",
     testimony:
       "Their community management is unmatched. Conversations stayed active, positive, and aligned with our vision at all times.",
