@@ -68,18 +68,16 @@ const AnimatedStat = ({ value, label }: { value: string; label: string }) => {
         transition={{ duration: 2.5, repeat: Infinity }}
       />
 
-      <motion.h1
+      <motion.h3
         className="relative text-2xl sm:text-5xl font-extrabold text-white"
         initial={{ scale: 0.6 }}
         animate={{ scale: 1 }}
         transition={{ type: "spring", stiffness: 200 }}
       >
         {value}
-      </motion.h1>
+      </motion.h3>
 
-      <p className="relative text-sm sm:text-base text-gray-400">
-        {label}
-      </p>
+      <p className="relative text-sm sm:text-base text-gray-400">{label}</p>
     </motion.div>
   );
 };

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import About from "@/components/About";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
@@ -8,44 +9,50 @@ import Services from "@/components/services";
 import Testimonials from "@/components/Testimonials";
 import WhyUS from "@/components/whyUs";
 
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "DeHawk is your trusted Web3 growth partner — real community, visibility, and trust for crypto projects.",
+  alternates: {
+    canonical: "/",
+  },
+};
+
 export default function Home() {
   return (
     <div className=" min-h-screen bg-[#001006]">
       <Header />
-   <div className="w-full">
+      <div className="w-full">
+        <section id="about">
+          <About />
+        </section>
 
+        <section id="services">
+          <Services />
+        </section>
 
+        <section id="results">
+          <Results />
+        </section>
 
-  <section id="about">
-    <About />
-  </section>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
 
-  <section id="services">
-    <Services />
-  </section>
+        <section id="how-we-work">
+          <HowWeWork />
+        </section>
 
-  <section id="results">
-    <Results />
-  </section>
+        <section id="why-us">
+          <WhyUS />
+        </section>
 
-  <section id="testimonials">
-    <Testimonials />
-  </section>
+        <section id="contact">
+          <ContactUs />
+        </section>
 
-  <section id="how-we-work">
-    <HowWeWork />
-  </section>
-
-  <section id="why-us">
-    <WhyUS />
-  </section>
-
-  <section id="contact">
-    <ContactUs />
-  </section>
-
-  <Footer />
-</div>
+        <Footer />
+      </div>
     </div>
   );
 }

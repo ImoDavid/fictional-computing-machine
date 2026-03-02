@@ -26,9 +26,9 @@ const WhyUS = () => {
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-6 lg:px-8 pt-6 mt-20">
       <div className="text-center">
-        <h1 className="text-2xl lg:text-4xl font-semibold leading-tight tracking-tight text-[#72D600] capitalize">
+        <h2 className="text-2xl lg:text-4xl font-semibold leading-tight tracking-tight text-[#72D600] capitalize">
           Why Choose Us
-        </h1>
+        </h2>
 
         <p className="mt-2 sm:mt-2 text-sm sm:text-lg leading-relaxed text-white">
           The strategic advantage your Web3 project deserves.

@@ -70,9 +70,9 @@ const HowWeWork = () => {
     >
       {/* Header */}
       <motion.div variants={row} className="text-left max-w-3xl">
-        <h1 className="text-lg lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
+        <h2 className="text-lg lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
           How we work
-        </h1>
+        </h2>
         <p className="mt-2 text-sm sm:text-lg text-white">
           Our three-step process for building sustainable Web3 growth.
         </p>
@@ -96,9 +96,7 @@ const HowWeWork = () => {
             <h2 className="mt-4 text-xl font-bold text-white">
               {service.title}
             </h2>
-            <p className="mt-2 text-sm text-gray-300">
-              {service.description}
-            </p>
+            <p className="mt-2 text-sm text-gray-300">{service.description}</p>
           </motion.div>
         ))}
       </div>
@@ -118,9 +116,7 @@ const HowWeWork = () => {
           >
             {/* Step */}
             <div>
-              <h2 className="text-white text-5xl font-bold">
-                {service.step}
-              </h2>
+              <h2 className="text-white text-5xl font-bold">{service.step}</h2>
             </div>
 
             {/* Title */}
@@ -132,9 +128,7 @@ const HowWeWork = () => {
 
             {/* Description */}
             <div>
-              <p className="text-gray-400">
-                {service.description}
-              </p>
+              <p className="text-gray-400">{service.description}</p>
             </div>
           </motion.div>
         ))}

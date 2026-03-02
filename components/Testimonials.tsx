@@ -234,9 +234,9 @@ const Testimonials = () => {
     >
       {/* Header */}
       <motion.div variants={cardVariants} className="text-center">
-        <h1 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
+        <h2 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
           testimonials
-        </h1>
+        </h2>
         <p className="mt-2 text-sm sm:text-lg text-white">
           What founders and communities say about working with us.
         </p>

@@ -271,9 +271,9 @@ const Services = () => {
     >
       {/* Header */}
       <motion.div variants={cardVariants} className="text-center">
-        <h1 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
+        <h2 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
           our services
-        </h1>
+        </h2>
         <p className="mt-2 text-sm sm:text-lg text-white">
           Everything you need to grow, scale, and dominate the Web3 space.
         </p>

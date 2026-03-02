@@ -71,10 +71,10 @@ const statCard = {
 const AnimatedStat = ({ item }: any) => {
   return (
     <motion.div
-  variants={statCard}
-  whileHover={{ scale: 1.06 }}
-  transition={{ type: "spring", stiffness: 260, damping: 14 }}
-  className="
+      variants={statCard}
+      whileHover={{ scale: 1.06 }}
+      transition={{ type: "spring", stiffness: 260, damping: 14 }}
+      className="
     relative
     flex flex-col
     gap-3
@@ -83,8 +83,7 @@ const AnimatedStat = ({ item }: any) => {
     items-start sm:items-center
     text-left sm:text-center
   "
->
-
+    >
       {/* Glow pulse */}
       <motion.div
         className="absolute inset-0 rounded-xl bg-[#72D600]/10 blur-xl"
@@ -93,24 +92,19 @@ const AnimatedStat = ({ item }: any) => {
       />
 
       {/* Value */}
-      <motion.h1
-  className="w-full text-2xl sm:text-5xl font-extrabold text-white text-left sm:text-center"
->
-  {item.value}
-</motion.h1>
-
+      <motion.h3 className="w-full text-2xl sm:text-5xl font-extrabold text-white text-left sm:text-center">
+        {item.value}
+      </motion.h3>
 
       {/* Sub */}
-     <p className="text-sm sm:text-base capitalize font-bold text-[#72D600]">
-  {item.sub}
-</p>
-
+      <p className="text-sm sm:text-base capitalize font-bold text-[#72D600]">
+        {item.sub}
+      </p>
 
       {/* Label */}
-     <p className="text-sm font-medium text-white/80 leading-relaxed min-h-[3.5rem] sm:min-h-0">
-  {item.label}
-</p>
-
+      <p className="text-sm font-medium text-white/80 leading-relaxed min-h-[3.5rem] sm:min-h-0">
+        {item.label}
+      </p>
     </motion.div>
   );
 };
@@ -129,9 +123,9 @@ const Results = () => {
     >
       {/* Header */}
       <motion.div variants={statCard} className="text-center">
-        <h1 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
+        <h2 className="text-2xl lg:text-4xl font-semibold tracking-tight text-[#72D600] capitalize">
           Results
-        </h1>
+        </h2>
 
         <p className="mt-2 text-sm sm:text-lg text-white">
           Our campaigns drive sustainable growth by scaling your visibility,

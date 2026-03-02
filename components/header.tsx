@@ -9,10 +9,22 @@ import CalendlyButton from "./CalendlyButton";
 
 
 const trustedLogos = [
-  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_ojnb7g.jpg", alt: "Project One" },
-  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773619/WhatsApp_Image_2026-01-14_at_11.25.00_AM_ros7w6.jpg", alt: "Project One" },
-  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_1_ag9yfk.jpg", alt: "Project One" },
-  { src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773933/logo-2_qxikit.jpg", alt: "Project One" },
+  {
+    src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_ojnb7g.jpg",
+    alt: "Trusted project logo",
+  },
+  {
+    src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773619/WhatsApp_Image_2026-01-14_at_11.25.00_AM_ros7w6.jpg",
+    alt: "Trusted project logo",
+  },
+  {
+    src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773618/WhatsApp_Image_2026-01-14_at_11.24.59_AM_1_ag9yfk.jpg",
+    alt: "Trusted project logo",
+  },
+  {
+    src: "https://res.cloudinary.com/dfljnnxln/image/upload/v1768773933/logo-2_qxikit.jpg",
+    alt: "Trusted project logo",
+  },
 ];
 
 const NAV_LINKS = [
@@ -49,7 +61,10 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="relative w-full overflow-hidden bg-black pb-14" id ="home">
+    <header
+      className="relative w-full overflow-hidden bg-black pb-14"
+      id="home"
+    >
       {/* Animated Parallax Glow */}
       <motion.div
         className="pointer-events-none absolute inset-0"
@@ -78,17 +93,15 @@ const Header = () => {
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-6">
         {/* Top Bar */}
         <div className="flex items-center justify-between">
-        
-
-<motion.div className="flex items-center">
-  <Image
-    src="/logo.svg"
-    alt="Logo"
-    width={120}
-    height={40}
-    priority
-  />
-</motion.div>
+          <motion.div className="flex items-center">
+            <Image
+              src="/logo.svg"
+              alt="De Hawk logo"
+              width={120}
+              height={40}
+              priority
+            />
+          </motion.div>
 
           <nav className="hidden md:flex gap-6 rounded-full bg-[#052E14] px-8 py-3 text-sm text-gray-300">
             {NAV_LINKS.map((item) => (
@@ -104,9 +117,7 @@ const Header = () => {
           </nav>
 
           <div className="flex items-center gap-3">
-          
-             
-              <CalendlyButton className="hidden sm:inline-flex rounded-full border border-[#1eff8e]/30 bg-[#0b2a18] px-6 py-3 text-sm text-white"/>
+            <CalendlyButton className="hidden sm:inline-flex rounded-full border border-[#1eff8e]/30 bg-[#0b2a18] px-6 py-3 text-sm text-white" />
 
             <motion.button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -127,18 +138,16 @@ const Header = () => {
               exit={{ opacity: 0, y: -10 }}
               className="md:hidden mt-4 rounded-2xl bg-[#03180d] px-6 py-6 text-sm text-gray-300"
             >
-              {NAV_LINKS.map(
-                (item) => (
-                  <a
-                    key={item.path}
-                    href={item.path}
-                    onClick={() => setMenuOpen(false)}
-                    className="block py-2 hover:text-white"
-                  >
-                    {item.label}
-                  </a>
-                ),
-              )}
+              {NAV_LINKS.map((item) => (
+                <a
+                  key={item.path}
+                  href={item.path}
+                  onClick={() => setMenuOpen(false)}
+                  className="block py-2 hover:text-white"
+                >
+                  {item.label}
+                </a>
+              ))}
             </motion.nav>
           )}
         </AnimatePresence>
@@ -183,14 +192,12 @@ const Header = () => {
           </motion.p>
 
           <motion.div variants={fadeUp} className="mt-10">
-           
-              
-              <CalendlyButton className="rounded-full bg-[#000F05] px-8 py-3 text-sm text-white"/>
+            <CalendlyButton className="rounded-full bg-[#000F05] px-8 py-3 text-sm text-white" />
 
             <div className="mt-20">
-              <h1 className="text-lg lg:text-2xl font-semibold leading-tight tracking-tight text-white capitalize">
+              <h2 className="text-lg lg:text-2xl font-semibold leading-tight tracking-tight text-white capitalize">
                 Trusted by
-              </h1>
+              </h2>
 
               <p className="mt-5 sm:mt-6 text-sm sm:text-base leading-relaxed text-gray-400">
                 Our proven strategies and consistent delivery have earned the

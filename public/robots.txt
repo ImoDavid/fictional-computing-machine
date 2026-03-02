@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# adjust sitemap URL to your production domain
+Sitemap: https://dehawk.xyz/sitemap.xml
