@@ -111,7 +111,7 @@ const ContactUs = () => {
         {/* Right: Form */}
         <motion.form variants={fadeUp} className="w-full lg:w-1/2 space-y-4">
           <form
-            action="https://formspree.io/f/xaqdpedl"
+            action="https://formspree.io/f/mgonvkkj"
             method="POST"
             className="space-y-6"
           >
